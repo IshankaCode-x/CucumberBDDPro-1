@@ -40,7 +40,7 @@ public class AdvertiseForTenderAuctioApprovalStepDef extends AdvertiseForTenderA
 	@When("I enter CAFTA <Password>")
 	public void i_enter_cafta_password() throws Throwable{
 		AdvertiseForTenderAuctioApprovalSub var1=new AdvertiseForTenderAuctioApprovalSub(driver);
-		 var1.typePassword().sendKeys("Hecember@1234");
+		 var1.typePassword().sendKeys("September@1234");
 		 Thread.sleep(2000);
 	}
 	

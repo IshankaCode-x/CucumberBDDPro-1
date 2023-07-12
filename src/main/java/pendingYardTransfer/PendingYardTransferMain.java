@@ -7,7 +7,7 @@ public class PendingYardTransferMain {
 	public WebDriver driver;
 	public WebDriver inheritancePYT() 
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\ThiwankaRa\\Downloads\\CucumberBDDPro\\ChromeDriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\IshankaPu\\eclipse-workspace\\CucumberBDDPro-1\\ChromeDriver.exe");
 	
 		WebDriver driver = new ChromeDriver();
 		return driver;

@@ -12,6 +12,7 @@ import clickOnAddNewYardIn.ClickOnAddNewYardInSub;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import releasePending.ReleasePendingSub;
 import yardEvaluationn.YardEvaluationnMain;
 import yardEvaluationn.YardEvaluationnSub;
 
@@ -43,7 +44,7 @@ public class YardValuationStepDef extends YardEvaluationnMain {
 	@When("I enter CANYV  <Password>")
 	public void i_enter_canyv_password() throws Throwable {
 		YardEvaluationnSub var1=new YardEvaluationnSub(driver);
-		 var1.typePassword().sendKeys("Hecember@1234");
+		 var1.typePassword().sendKeys("September@1234");
 		 Thread.sleep(2000);
 	}
 	
@@ -52,6 +53,14 @@ public class YardValuationStepDef extends YardEvaluationnMain {
 		YardEvaluationnSub var1=new YardEvaluationnSub(driver);
 		var1.clicksubmit().click();
 		Thread.sleep(6000);
+	}
+
+	@When("I Scroll to Yard Management CANYV")
+	public void i_scroll_to_yard_management_canyv() throws Throwable{
+		Thread.sleep(3000);
+		YardEvaluationnSub var1=new YardEvaluationnSub(driver);
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	   	js.executeScript("arguments[0].scrollIntoView(true);", var1.ScrollToYardManagement());
 	}
 	
 	@When("I click Yard Management CANYV")
@@ -84,6 +93,7 @@ public class YardValuationStepDef extends YardEvaluationnMain {
 		YardEvaluationnSub  var1=new YardEvaluationnSub (driver);
 		var1. AddNewYardValuation().click();
 	}
+	
 	@When("I click The View or Update Yard Valuation CANYV")
 	public void i_click_the_view_or_update_yard_valuation_canyv() {
 		YardEvaluationnSub  var1=new YardEvaluationnSub (driver);
@@ -93,7 +103,7 @@ public class YardValuationStepDef extends YardEvaluationnMain {
 	@When("I  Enter the Vehicle Number CANYV")
 	public void i_enter_the_vehicle_number_canyv() throws Throwable {
 		YardEvaluationnSub var1=new YardEvaluationnSub(driver);
-		var1.EntertheVehicleNumberValuation().sendKeys("QB9335");
+		var1.EntertheVehicleNumberValuation().sendKeys("HM1289");
 		Thread.sleep(2000);
 	}
 //	@When("I Enter the Contract Number CANYV")
@@ -124,14 +134,15 @@ public class YardValuationStepDef extends YardEvaluationnMain {
 	      JavascriptExecutor js = (JavascriptExecutor) driver;
 	      js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.clicktheScrollBtnValuation());
 	}
-	@When("I Click  the Scroll btn to view CANYV")
-	public void i_click_the_scroll_btn_to_view_canyv() throws Throwable{
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		  YardEvaluationnSub  var1 = new YardEvaluationnSub(driver);
-	      JavascriptExecutor js = (JavascriptExecutor) driver;
-	      js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.clicktheScrollBtnValuationview());
-	      Thread.sleep(3000);
-	}
+	
+//	@When("I Click  the Scroll btn to view CANYV")
+//	public void i_click_the_scroll_btn_to_view_canyv() throws Throwable{
+//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//		  YardEvaluationnSub  var1 = new YardEvaluationnSub(driver);
+//	      JavascriptExecutor js = (JavascriptExecutor) driver;
+//	      js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.clicktheScrollBtnValuationview());
+//	      Thread.sleep(3000);
+//	}
 	
 	@When("I Click  the ReValuation btn CANYV")
 	public void i_click_the_re_valuation_btn_canyv() throws Throwable {
@@ -190,7 +201,6 @@ public class YardValuationStepDef extends YardEvaluationnMain {
 		Thread.sleep(3000);
 	}
 	
-
 	@When("I click the  Down Scroll Btn2 CANYV")
 	public void i_click_the_down_scroll_btn2_canyv() throws Throwable {
 		Thread.sleep(3000);
@@ -242,8 +252,6 @@ public class YardValuationStepDef extends YardEvaluationnMain {
 		var1.ClickSelectBtnEx().click();
 		Thread.sleep(3000);
 	}
-
-
 
 	@When("I click the  Down Scroll Btn4 CANYV")
 	public void i_click_the_down_scroll_btn4_canyv() throws Throwable{

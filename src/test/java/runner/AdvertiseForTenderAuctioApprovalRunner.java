@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/feature",
-		glue = "stepDefinition" , tags=" @Post_yard_Management ")
+		glue = "stepDefinition" , tags=" @Post_yard_Management  ")
 public class AdvertiseForTenderAuctioApprovalRunner {
 
 }
