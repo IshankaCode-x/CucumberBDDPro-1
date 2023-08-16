@@ -90,41 +90,45 @@ public class OfferApprovalStepDef extends OfferApprovalMain {
 
 	@When("I Click Offer Approval COA")
 	public void i_click_offer_approval_coa() throws Throwable{
+		Thread.sleep(6000);
 		OfferApprovalSub var1=new OfferApprovalSub(driver);
 		var1.clickOfferApproval().click();
-		Thread.sleep(6000);
 		JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("window.scrollTo(0, 0);");
 	}
 	
 	@When("I Search vehicle Number COA")
 	public void i_search_vehicle_number_coa() throws Throwable{
+		Thread.sleep(2000);
 		OfferApprovalSub var1=new OfferApprovalSub(driver);
 		var1.SearchVehicleNumber().sendKeys("AAY4113");
-		Thread.sleep(2000);
+		
 	}
 	
 	@When("I Click Search BTN  COA")
 	public void i_click_search_btn_coa() throws Throwable{
+		Thread.sleep(3000);
 		OfferApprovalSub var1=new OfferApprovalSub(driver);
 		var1.ClickOnSerachBTN().click();
-		Thread.sleep(3000);
+		
 	}
 	
 	@When("I Scroll to View Offer COA")
 	public void i_scroll_to_view_offer_coa() throws Throwable{
+		 Thread.sleep(3000);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		OfferApprovalSub var1=new OfferApprovalSub(driver);
 	      JavascriptExecutor js = (JavascriptExecutor) driver;
 	      js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.ScrolltoViewOffer());
-	      Thread.sleep(3000);
+	     
 	}
 
 	@When("I Click View Offer COA")
 	public void i_click_view_offer_coa() throws Throwable{
+		Thread.sleep(6000);
 		OfferApprovalSub var1=new OfferApprovalSub(driver);
 		var1.ClickViewOffer().click();
-		Thread.sleep(6000);
+		
 	}
 
 

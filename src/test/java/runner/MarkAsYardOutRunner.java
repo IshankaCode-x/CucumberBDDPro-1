@@ -8,7 +8,7 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src\\test\\java\\feature",
-		glue = "stepDefinition",tags="@Click_On_Mark_As_Yard_Out")
+		glue = "stepDefinition",tags="@Clickon_View_Or_Update_YArd_In")
 
 public class MarkAsYardOutRunner {
 

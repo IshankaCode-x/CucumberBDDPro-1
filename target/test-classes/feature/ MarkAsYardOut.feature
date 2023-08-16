@@ -18,8 +18,8 @@ Feature: Title of your feature
    And I Enter  vehicle Number COMY
    And I click Search BTN  COMY
    And I Scroll To check Box COMY
-   #And I Select Date Time  COMY
+   And I Select Date Time  COMY
    And I Click Check Box COMY
    And I Scroll To Update COMY
-   And I Click Update BTN COMY
+   #And I Click Update BTN COMY
    

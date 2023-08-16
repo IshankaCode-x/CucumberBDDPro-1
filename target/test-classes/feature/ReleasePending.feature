@@ -37,4 +37,4 @@ Feature: Title of your feature
     And I Scroll to Save BTN CORP
     And I upload file CORP
     And I click on Save button CORP
-    And I Click Ok BTN  CORP
+    #And I Click Ok BTN  CORP

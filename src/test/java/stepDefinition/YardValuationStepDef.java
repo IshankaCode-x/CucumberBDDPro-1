@@ -8,11 +8,10 @@ import org.openqa.selenium.WebElement;
 
 import com.beust.jcommander.internal.Lists;
 
-import clickOnAddNewYardIn.ClickOnAddNewYardInSub;
+
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import releasePending.ReleasePendingSub;
 import yardEvaluationn.YardEvaluationnMain;
 import yardEvaluationn.YardEvaluationnSub;
 
@@ -54,21 +53,14 @@ public class YardValuationStepDef extends YardEvaluationnMain {
 		var1.clicksubmit().click();
 		Thread.sleep(6000);
 	}
-
-	@When("I Scroll to Yard Management CANYV")
-	public void i_scroll_to_yard_management_canyv() throws Throwable{
-		Thread.sleep(3000);
-		YardEvaluationnSub var1=new YardEvaluationnSub(driver);
-	    JavascriptExecutor js = (JavascriptExecutor) driver;
-	   	js.executeScript("arguments[0].scrollIntoView(true);", var1.ScrollToYardManagement());
-	}
-	
 	@When("I click Yard Management CANYV")
 	public void i_click_yard_management_canyv() throws Throwable {
 		Thread.sleep(5000);
-		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
-		Thread.sleep(5000);
 		YardEvaluationnSub var1=new YardEvaluationnSub(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", var1.ScrollToYardManagement());
+        List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+        Thread.sleep(5000);
 		var1.clickYardManagement().click();
 		Thread.sleep(5000);
 	}
@@ -135,14 +127,14 @@ public class YardValuationStepDef extends YardEvaluationnMain {
 	      js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.clicktheScrollBtnValuation());
 	}
 	
-//	@When("I Click  the Scroll btn to view CANYV")
-//	public void i_click_the_scroll_btn_to_view_canyv() throws Throwable{
-//		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//		  YardEvaluationnSub  var1 = new YardEvaluationnSub(driver);
-//	      JavascriptExecutor js = (JavascriptExecutor) driver;
-//	      js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.clicktheScrollBtnValuationview());
-//	      Thread.sleep(3000);
-//	}
+	@When("I Click  the Scroll btn to view CANYV")
+	public void i_click_the_scroll_btn_to_view_canyv() throws Throwable{
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		  YardEvaluationnSub  var1 = new YardEvaluationnSub(driver);
+	      JavascriptExecutor js = (JavascriptExecutor) driver;
+	      js.executeScript("arguments[0].scrollLeft = arguments[0].scrollWidth", var1.clicktheScrollBtnValuationview());
+	      Thread.sleep(3000);
+	}
 	
 	@When("I Click  the ReValuation btn CANYV")
 	public void i_click_the_re_valuation_btn_canyv() throws Throwable {

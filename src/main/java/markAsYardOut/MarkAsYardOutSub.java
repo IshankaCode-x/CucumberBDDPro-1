@@ -87,6 +87,21 @@ public WebDriver driver;
 		By var_SelectDateTime = By.xpath("//*[@id=\"releaseDateTime0\"]");
 		return driver.findElement(var_SelectDateTime);
 	}
+	public WebElement SetDate()
+	{
+		By var_SetDate = By.xpath("/html/body/div[3]/div/div/div/div/div[1]/div[1]/div[2]/table/tbody/tr[5]/td[4]/div");
+		return driver.findElement(var_SetDate);
+	}
+	public WebElement SetTime()
+	{
+		By var_SetTime= By.xpath("/html/body/div[3]/div/div/div/div/div[1]/div[2]/div[2]/ul[1]/li[2]/div");
+		return driver.findElement(var_SetTime);
+	}
+	public WebElement ClickOKBTN()
+	{
+		By var_SetTime= By.xpath("/html/body/div[3]/div/div/div/div/div[2]/ul/li[2]/button");
+		return driver.findElement(var_SetTime);
+	}
 	public WebElement ClickCheckbox()
 	{
 		By var_ClickCheckbox = By.xpath("//*[@id=\"root\"]/div/div/div[2]/div/div/div/div[2]/div/div/div/div[1]/div[3]/form/div/div/div/div/div/div/table/tbody/tr[2]/td[7]/div/div/label/span/input");

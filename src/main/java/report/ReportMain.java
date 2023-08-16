@@ -1,21 +1,16 @@
-package yardInquiry;
+package report;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
-public class YardInquiryMain {
+public class ReportMain {
+
 	public WebDriver driver;
-	public WebDriver inheritance2() 
+	public WebDriver inheritanceRE() 
 	{
 		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\IshankaPu\\\\eclipse-workspace\\\\CucumberBDDPro-1\\\\ChromeDriver\\\\chromedriver.exe");
-		 
 	
-		
-		
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--remote-allow-origins=*");
-		WebDriver driver = new ChromeDriver(options);
+		WebDriver driver = new ChromeDriver();
 		return driver;
 	}
 }

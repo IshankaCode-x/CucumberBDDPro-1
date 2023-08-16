@@ -12,6 +12,8 @@ import clickOnAddNewYardIn.ClickOnAddNewYardInSub;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import markAsYardOut.MarkAsYardOutSub;
+import yardInquiry.YardInquirySub;
 
 public class NewYardInStep extends ClickOnAddNewYardInMain{
 	@Given("I need to navigate Fusion X Loging page CANYI")
@@ -39,7 +41,7 @@ public class NewYardInStep extends ClickOnAddNewYardInMain{
 	@When("I enter CANYI <Password> CANYI")
 	public void i_enter_canyi_password_canyi() throws Throwable {
 		 ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
-		 var1.typePassword().sendKeys("Hecember@1234");
+		 var1.typePassword().sendKeys("September@1234");
 		 Thread.sleep(2000);
 	}
 	
@@ -48,14 +50,23 @@ public class NewYardInStep extends ClickOnAddNewYardInMain{
 		ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
 		var1.clicksubmit().click();
 	}
-	
-	@When("I click Yard Management CANYI")
-	public void i_click_yard_management_canyi()  throws Throwable {
-		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+
+	@When("I scroll to Yard Management CANYI")
+	public void i_scroll_to_yard_management_canyi() throws Throwable{
 		Thread.sleep(3000);
 		ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
+	    JavascriptExecutor js = (JavascriptExecutor) driver;
+	   	js.executeScript("arguments[0].scrollIntoView(true);", var1.ScrollToYardManagement());
+	}
+
+	@When("I click Yard Management CANYI")
+	public void i_click_yard_management_canyi()  throws Throwable {
+		Thread.sleep(5000);
+		List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+		Thread.sleep(5000);
+		ClickOnAddNewYardInSub var1=new ClickOnAddNewYardInSub(driver);
 		var1.clickYardManagement().click();
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 	}
 	
 	@When("I click on Yard In CANYI")

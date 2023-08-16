@@ -22,5 +22,4 @@ Feature: Title of your feature
     And I click Search BTN  CRGP
     And I Click Check Box  CRGP
     And I Click Print CRGP 
-    And I Click ok Btn  CRGP 
-    
+   

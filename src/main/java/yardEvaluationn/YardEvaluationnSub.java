@@ -40,7 +40,7 @@ public WebElement clicksubmit()
 }
 public WebElement ScrollToYardManagement()
 {
-	By var_ScrollToYardManagement= By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div/div[2]/div[8]/div/div[2]");
+	By var_ScrollToYardManagement= By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div/div[2]");
 	return driver.findElement(var_ScrollToYardManagement);
 }
 

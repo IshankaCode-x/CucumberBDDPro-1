@@ -8,7 +8,7 @@ import io.cucumber.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "src/test/java/feature",
-		glue = "stepDefinition",tags="@YardInquery")
+		glue = "stepDefinition",tags=" @search_vehicle_number")
 public class YardInqueryRunner {
 
 }

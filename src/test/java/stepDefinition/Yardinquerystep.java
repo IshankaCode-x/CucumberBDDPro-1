@@ -12,6 +12,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 import releasePending.ReleasePendingSub;
+import yardEvaluationn.YardEvaluationnSub;
 import yardInquiry.YardInquiryMain;
 import yardInquiry.YardInquirySub;
 
@@ -54,9 +55,12 @@ public class Yardinquerystep extends YardInquiryMain {
   
   @And("^I click Yard in option yard inquery YI$")
   public void i_click_yard_in_option_yard_inquery_yi() throws Throwable{
-    	List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
-		Thread.sleep(5000);
+	    Thread.sleep(5000);
 		YardInquirySub var1=new YardInquirySub(driver);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].scrollIntoView(true);", var1.ScrollToYardManagement());
+        List<String> browserTabs = Lists.newArrayList(driver.getWindowHandles());
+        Thread.sleep(5000);
 		var1.clickYardIn().click();
 		Thread.sleep(5000);		
   }

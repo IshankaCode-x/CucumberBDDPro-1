@@ -94,7 +94,7 @@ public class MarkAsYardOutStepDef extends MarkAsYardOutMain  {
 	@When("I Enter  vehicle Number COMY")
 	public void i_enter_vehicle_number_comy() throws Throwable{
 		MarkAsYardOutSub var1=new  MarkAsYardOutSub(driver);
-		 var1.EntervehicleNumber().sendKeys("AAA9007");
+		 var1.EntervehicleNumber().sendKeys("NC3909");
 		 Thread.sleep(2000);
 	}
 	@When("I click Search BTN  COMY")
@@ -116,12 +116,15 @@ public class MarkAsYardOutStepDef extends MarkAsYardOutMain  {
 	public void i_select_date_time_comy() throws Throwable{
 		Thread.sleep(2000);
 		MarkAsYardOutSub var1=new  MarkAsYardOutSub(driver);
-        var1.SelectDateTime().click();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].value = ''", var1.SelectDateTime());
-        Thread.sleep(2000);
-        var1.SelectDateTime().sendKeys("2023-07-12 00:00:00");
+		var1. SelectDateTime().click();
+		Thread.sleep(2000);
+		var1.  SetDate().click();
+		Thread.sleep(2000);
+		var1. SetTime().click();
+		Thread.sleep(2000);
+		var1. ClickOKBTN().click();
 	}
+	
 	@When("I Click Check Box COMY")
 	public void i_click_check_box_comy() throws Throwable{
 		MarkAsYardOutSub var1=new  MarkAsYardOutSub(driver);

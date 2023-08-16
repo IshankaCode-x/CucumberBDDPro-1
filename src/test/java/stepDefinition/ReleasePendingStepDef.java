@@ -91,7 +91,7 @@ public void i_click_on_release_pending_release_to_buyer_corp() throws Throwable{
 @When("I Search vehicle Number CORP")
 public void i_search_vehicle_number_corp() throws Throwable{
 	ReleasePendingSub var1=new ReleasePendingSub(driver);
-	 var1.SearchvehicleNum().sendKeys("DAB8017");
+	 var1.SearchvehicleNum().sendKeys("QA1211");
 	 Thread.sleep(2000);
 }
 

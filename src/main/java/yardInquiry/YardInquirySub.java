@@ -41,6 +41,11 @@ public WebDriver driver;
 		return driver.findElement(var_submit_btn);
 		
 	}
+	public WebElement ScrollToYardManagement()
+	{
+		By var_ScrollToYardManagement= By.xpath("//*[@id=\"root\"]/div/div[2]/div/div/div/div/div/div[2]");
+		return driver.findElement(var_ScrollToYardManagement);
+	}
 	
 	public WebElement clickYardIn()
 	{

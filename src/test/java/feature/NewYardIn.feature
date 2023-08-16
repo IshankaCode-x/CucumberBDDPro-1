@@ -9,6 +9,7 @@ Feature: Title of your feature
     And I click continue button  CANYI 
     And I enter CANYI <Password> CANYI 
     And I click the sign in button CANYI 
+    And I scroll to Yard Management CANYI 
     And I click Yard Management CANYI 
     And I click on Yard In CANYI 
     And I click on YardIn Details CANYI 
@@ -42,6 +43,7 @@ Feature: Title of your feature
     And I click continue button  CANYI 
     And I enter CANYI <Password> CANYI 
     And I click the sign in button CANYI 
+    And I scroll to Yard Management CANYI 
     And I click Yard Management CANYI 
     And I click on Yard In CANYI 
     And I click on YardIn Details CANYI 
@@ -76,6 +78,7 @@ Feature: Title of your feature
     And I click continue button  CANYI 
     And I enter CANYI <Password> CANYI 
     And I click the sign in button CANYI 
+    And I scroll to Yard Management CANYI 
     And I click Yard Management CANYI 
     And I click on Yard In CANYI 
     And I Click the Settlement Letter Print  CANYI  
